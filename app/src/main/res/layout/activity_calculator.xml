@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_no1"
+            style="@style/AC_top"
+            android:gravity="center"
+            android:hint="값1"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/tv_calc"
+            style="@style/AC_top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/et_no2"
+            style="@style/AC_top"
+            android:gravity="center"
+            android:hint="값2"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="30dp" />
+
+        <TextView
+            style="@style/AC_top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="="
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            style="@style/AC_top"
+            android:gravity="center"
+            android:hint="답"
+            android:maxLength="10"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                //android:background="#33333"
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="7" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="8" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="4" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="5" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/AC_bottom_center"
+
+                    android:text="1" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="2" />
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/AC_bottom_center"
+                    android:text="0" />
+
+                <Button android:onClick="inputOperetion"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="="
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/AC_right_word"
+                android:text="C" />
+
+            <Button
+                style="@style/AC_right_word"
+                android:text="/" />
+
+            <Button
+                style="@style/AC_right_word"
+                android:text="*" />
+
+            <Button
+                style="@style/AC_right_word"
+                android:text="-" />
+
+            <Button
+                style="@style/AC_right_word"
+                android:text="+" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

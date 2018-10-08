@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndDev</string>
+    <string name="main_button1">Calculator</string>
+    <string name="main_button2">MP3 Player</string>
+    <string name="music1">어른</string>
+    <string name="music2">결혼</string>
+    <string name="stop">정지</string>
+    <string name="pause">일시정지</string>
+    <string name="play">시작</string>
+</resources>
