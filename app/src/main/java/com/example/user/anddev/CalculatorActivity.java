@@ -11,11 +11,12 @@ public class CalculatorActivity extends AppCompatActivity {
     EditText et_no1 = null , et_no2 = null;
     TextView tv_calc = null, tv_result = null;
     Button div = null;
-    String Operator = "-";
+    String Operator = "";
     String result1 = "";
     String result2 = "";
 
     @Override
+    //실행
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
@@ -38,10 +39,14 @@ public class CalculatorActivity extends AppCompatActivity {
         String str = btn.getText().toString();
         Operator = str;
         if(str.equals("C")) {
-            et_no1.setText(null);
-            et_no2.setText(null);
+            result1="";
+            result2="";
+            Operator="";
+            et_no1.setText("");
+            et_no2.setText("");
             tv_calc.setText("");
             tv_result.setText("");
+
         } else {
             tv_calc.setText(str);
         }
@@ -50,11 +55,11 @@ public class CalculatorActivity extends AppCompatActivity {
         Button btn =(Button)view;
         String str = btn.getText().toString();
 
-        if(result1.length()<=4) {
-            result1 += str;
+        if(Operator.equals("") && et_no1.length()<4) {
+            result1 += btn.getText();
             et_no1.setText(result1);
-        }else {
-            result2 += str;
+        } else if(!Operator.equals("") && et_no2.length()<4){
+            result2 += btn.getText();
             et_no2.setText(result2);
         }
 
