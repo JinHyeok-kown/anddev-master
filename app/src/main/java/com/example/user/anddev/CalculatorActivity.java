@@ -14,7 +14,7 @@ public class CalculatorActivity extends AppCompatActivity {
     String Operator = "";
     String result1 = "";
     String result2 = "";
-
+//yyyyy
     @Override
     //실행
     protected void onCreate(Bundle savedInstanceState) {
